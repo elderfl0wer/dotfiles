@@ -1,9 +1,8 @@
 <#
     SyncDotfiles.ps1
 
-    Syncs your live config folders into your dotfiles repo.
-    Run this any time you want the repo to reflect your current setup,
-    then git add/commit/push as normal (or let the script do it — see bottom).
+    Syncs my live config folders into my dotfiles repo.
+    Auto git push commented out at bottom.
 #>
 
 # ---- CONFIG: add more folders here as you collect them ----

@@ -42,9 +42,9 @@ map("n", "<C-a>", "ggVG")
 -- Find
 map("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { silent = true })
 
--- Toggle floating terminal (VSCode-style Ctrl+`)
-map("n", "<C-`>", "<cmd>ToggleTerm<CR>", { silent = true })
-map("t", "<C-`>", "<cmd>ToggleTerm<CR>", { silent = true }) -- also works while inside the terminal
+-- Toggle floating terminal (Ctrl+L)
+map("n", "<C-l>", "<cmd>ToggleTerm<CR>", { silent = true })
+map("t", "<C-l>", "<cmd>ToggleTerm<CR>", { silent = true }) -- also works while inside the terminal
 
 -- Toggle file explorer sidebar
 map("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", { silent = true })
