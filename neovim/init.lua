@@ -54,3 +54,5 @@ map("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", {
     silent = true,
     desc = "Toggle file explorer",
 })
+
+map("n", "<C-l>", "<cmd>ToggleTerm<CR>", { silent = true })

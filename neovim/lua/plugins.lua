@@ -35,5 +35,19 @@ return {
     
     {
         { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    }
+    },
+
+    {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    opts = {
+        direction = "float",
+        float_opts = {
+            border = "rounded", -- "single", "double", "shadow", etc.
+            width = 120,
+            height = 30,
+        },
+    },
+},
 }
+
