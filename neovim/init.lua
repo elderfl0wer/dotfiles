@@ -45,18 +45,6 @@ vim.g.c_syntax_for_h = 1
 
 vim.cmd.colorscheme("moonfly")
 
-local transparent_bg = vim.api.nvim_create_augroup("TransparentBg", { clear = true })
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    group = transparent_bg,
-    callback = function()
-        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-        vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
-    end,
-})
-
 vim.api.nvim_exec_autocmds("ColorScheme", {})
 
 -- Keymaps
