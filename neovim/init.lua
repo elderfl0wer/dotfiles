@@ -34,14 +34,16 @@ vim.opt.splitright = true
 
 vim.opt.termguicolors = true
 
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
--- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
--- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 vim.opt.signcolumn = "yes"
 vim.opt.scrolloff = 8
 vim.g.c_syntax_for_h = 1
+
+vim.cmd.colorscheme("moonfly")
 
 -- Keymaps
 local map = vim.keymap.set
