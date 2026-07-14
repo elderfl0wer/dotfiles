@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(require("plugins"))
+require("lsp")
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
