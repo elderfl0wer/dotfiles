@@ -55,7 +55,7 @@ vim.api.nvim_exec_autocmds("ColorScheme", {})
 
 -- Keymaps
 local map = vim.keymap.set
--- NORMAL MODE
+-- NORMAL MODE --
 local builtin = require("telescope.builtin")
 
 map("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { silent = true })
@@ -67,3 +67,6 @@ map("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", {
 })
 
 map("n", "<C-l>", "<cmd>ToggleTerm<CR>", { silent = true })
+-- VISUAL MODE --
+map("v", "<C-c>", '"+y', { desc = "Copy to system clipboard" })
+
