@@ -65,5 +65,9 @@ return {
             "saadparwaiz1/cmp_luasnip",
         },
     },
+
+    {
+        "andweeb/presence.nvim",
+    },
 }
 
