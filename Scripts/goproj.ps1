@@ -1,1 +1,1 @@
-Set-Location "C:\Users\shrey\Projects"
+Set-Location "~\Projects/"
