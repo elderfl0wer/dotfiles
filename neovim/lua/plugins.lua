@@ -33,9 +33,9 @@ return {
     end,
     },
     
-    {
-        "bluz71/vim-moonfly-colors",
-    },
+    -- {
+    --     "bluz71/vim-moonfly-colors",
+    -- },
 
     {
     "akinsho/toggleterm.nvim",
@@ -81,68 +81,51 @@ return {
     },
 },
 
--- {
---     "sainnhe/gruvbox-material",
---     priority = 1000,
---     config = function()
---         vim.g.gruvbox_material_background = "medium"
---         vim.g.gruvbox_material_foreground = "material"
---         vim.g.gruvbox_material_enable_italic = true
---
---         vim.cmd.colorscheme("gruvbox-material")
---     end,
--- },
+{
+    "sainnhe/gruvbox-material",
+    priority = 1000,
+    config = function()
+        vim.g.gruvbox_material_background = "medium"
+        vim.g.gruvbox_material_foreground = "material"
+        vim.g.gruvbox_material_enable_italic = true
 
--- {
---     "nvim-lualine/lualine.nvim",
---     dependencies = {
---         "nvim-tree/nvim-web-devicons",
---     },
---
---     config = function()
---         require("lualine").setup({
---             options = {
---                 theme = "gruvbox-material",
---                 component_separators = "",
---                 section_separators = {
---                     left = "",
---                     right = "",
---                 },
---                 globalstatus = true,
---             },
---
---             sections = {
---                 lualine_a = { "mode" },
---                 lualine_b = { "branch" },
---                 lualine_c = { "filename" },
---
---                 lualine_x = {
---                     "diagnostics",
---                     "filetype",
---                 },
---
---                 lualine_y = { "progress" },
---                 lualine_z = { "location" },
---             },
---         })
---     end,
--- },
+        vim.cmd.colorscheme("gruvbox-material")
+    end,
+},
 
--- {
---        "zitrocode/carvion.nvim",
---        lazy = false,
---        priority = 1000,
---        opts = {
---            transparent = false,
---            styles = {
---                comments = { italic = true },
---                keywords = {},
---                functions = {},
---                variables = {},
---                strings = {},
---                types = {}
---            }
---        },
---     },
-}
+{
+    "nvim-lualine/lualine.nvim",
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+    },
+
+    config = function()
+        require("lualine").setup({
+            options = {
+                theme = "gruvbox-material",
+                component_separators = "",
+                section_separators = {
+                    left = "",
+                    right = "",
+                },
+                globalstatus = true,
+            },
+
+            sections = {
+                lualine_a = { "mode" },
+                lualine_b = { "branch" },
+                lualine_c = { "filename" },
+
+                lualine_x = {
+                    "diagnostics",
+                    "filetype",
+                },
+
+                lualine_y = { "progress" },
+                lualine_z = { "location" },
+            },
+        })
+    end,
+},
+
 

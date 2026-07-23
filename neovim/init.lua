@@ -44,12 +44,14 @@ vim.opt.signcolumn = "yes"
 vim.opt.scrolloff = 8
 vim.g.c_syntax_for_h = 1
 
-vim.cmd.colorscheme("moonfly")
--- vim.g.gruvbox_material_background = "medium"
--- vim.g.gruvbox_material_foreground = "material"
--- vim.g.gruvbox_material_enable_italic = true
+vim.cmd.colorscheme("kanagawa-paper-ink")
 
--- vim.cmd.colorscheme("gruvbox-material")
+-- vim.cmd.colorscheme("moonfly")
+vim.g.gruvbox_material_background = "medium"
+vim.g.gruvbox_material_foreground = "material"
+vim.g.gruvbox_material_enable_italic = true
+
+vim.cmd.colorscheme("gruvbox-material")
 -- vim.cmd.colorscheme('carvion')
 
 vim.api.nvim_exec_autocmds("ColorScheme", {})
