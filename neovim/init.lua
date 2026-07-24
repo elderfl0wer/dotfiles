@@ -72,16 +72,8 @@ map("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", {
 
 map("n", "<C-l>", "<cmd>ToggleTerm<CR>", { silent = true })
 
--- Save, VSCode-style, from any mode
-map({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR><Esc>", { silent = true, desc = "Save file" })
-
 -- Select all
 map("n", "<C-a>", "ggVG", { desc = "Select all" })
-
--- Buffer navigation, like browser/editor tabs
-map("n", "<C-Tab>", "<cmd>bnext<CR>", { silent = true, desc = "Next buffer" })
-map("n", "<C-S-Tab>", "<cmd>bprevious<CR>", { silent = true, desc = "Previous buffer" })
-map("n", "<C-w>", "<cmd>bdelete<CR>", { silent = true, desc = "Close buffer" })
 
 -- Move line(s) up/down, VSCode Alt+Up/Down but on Ctrl
 map("n", "<C-j>", "<cmd>m .+1<CR>==", { silent = true, desc = "Move line down" })

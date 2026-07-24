@@ -62,7 +62,6 @@ foreach ($m in $Mappings) {
 Write-Host "`nDone syncing." -ForegroundColor Green
 
 # ---- OPTIONAL: auto commit + push ----
-# Uncomment below if you want this script to also commit and push automatically.
 # Leave commented if you'd rather review changes in git before committing yourself.
 
 # Push-Location "C:\Users\shrey\dotfiles"

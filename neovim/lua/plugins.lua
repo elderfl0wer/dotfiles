@@ -33,9 +33,6 @@ return {
     end,
     },
     
-    -- {
-    --     "bluz71/vim-moonfly-colors",
-    -- },
 
     {
     "akinsho/toggleterm.nvim",
@@ -78,20 +75,26 @@ return {
         reading_text = "Reading %s",
         workspace_text = "Working on %s",
         file_explorer_text = "Browsing files",
+        },
     },
-},
+    {
+        "bluz71/vim-moonfly-colors",
+        config = function()
+        vim.cmd.colorscheme("moonfly")
+        end, 
+    },
 
-{
-    "sainnhe/gruvbox-material",
-    priority = 1000,
-    config = function()
-        vim.g.gruvbox_material_background = "medium"
-        vim.g.gruvbox_material_foreground = "material"
-        vim.g.gruvbox_material_enable_italic = true
-
-        vim.cmd.colorscheme("gruvbox-material")
-    end,
-},
+-- {
+--     "sainnhe/gruvbox-material",
+--     priority = 1000,
+--     config = function()
+--         vim.g.gruvbox_material_background = "medium"
+--         vim.g.gruvbox_material_foreground = "material"
+--         vim.g.gruvbox_material_enable_italic = true
+--
+--         vim.cmd.colorscheme("gruvbox-material")
+--     end,
+-- },
 
 {
     "nvim-lualine/lualine.nvim",
@@ -102,7 +105,8 @@ return {
     config = function()
         require("lualine").setup({
             options = {
-                theme = "gruvbox-material",
+                -- theme = "gruvbox-material",
+                theme = "moonfly",
                 component_separators = "",
                 section_separators = {
                     left = "",
