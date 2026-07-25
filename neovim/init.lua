@@ -72,6 +72,8 @@ map("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", {
 
 map("n", "<C-l>", "<cmd>ToggleTerm<CR>", { silent = true })
 
+map("n", "<C-\\>", "<cmd>vsplit<CR>", { silent = true })
+
 -- Select all
 map("n", "<C-a>", "ggVG", { desc = "Select all" })
 

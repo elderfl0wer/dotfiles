@@ -37,6 +37,21 @@ vim.lsp.config("clangd", {
 
 vim.lsp.enable("clangd")
 
+
+vim.lsp.config("rust_analyzer", {
+    capabilities = capabilities,
+    cmd = { "rust-analyzer" },
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = { allFeatures = true },
+            checkOnSave = { command = "clippy" },
+            inlayHints = { enable = true },
+        },
+    },
+})
+
+vim.lsp.enable("rust_analyzer")
+
 -- Completion (tab to select/confirm)
 local cmp = require("cmp")
 local luasnip = require("luasnip")
