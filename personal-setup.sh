@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Shreyaan Misra, July 2026
-# v1.1 - Fixed lazy.nvim bootstrap, idempotency, toggleterm shell, ncurses-devel.
+# v1.2 - Fixed non-breaking spaces, added wget dependency, and updated python to python3.
 
 set -euo pipefail
 
@@ -11,8 +11,8 @@ sudo dnf upgrade --refresh -y
 
 echo "Installing User Packages"
 sudo dnf install -y \
-    coreutils gcc make python neovim clang unzip \
-    ncurses ncurses-devel git clangd
+    coreutils gcc make python3 neovim clang unzip \
+    ncurses ncurses-devel git clangd wget
 
 echo "Setting User Programs"
 
