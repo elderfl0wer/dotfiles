@@ -52,6 +52,22 @@ vim.lsp.config("rust_analyzer", {
 
 vim.lsp.enable("rust_analyzer")
 
+vim.lsp.config("pyright", {
+    capabilities = capabilities,
+    cmd = { "pyright-langserver", "--stdio" },
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "basic", -- or "strict" / "off"
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+            },
+        },
+    },
+})
+
+vim.lsp.enable("pyright")
+
 -- Completion (tab to select/confirm)
 local cmp = require("cmp")
 local luasnip = require("luasnip")
