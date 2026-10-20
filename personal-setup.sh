@@ -32,6 +32,7 @@ alias la="ls -a -h -l"
 alias ll="ls -h -l"
 alias vi="nvim"
 alias vim="nvim"
+alias ls="ls -a -h -l --color=auto"
 EOF
     echo "Appended aliases/config to ~/.bashrc"
 else
