@@ -30,6 +30,30 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
+-- Kotlin LSP setup
+vim.lsp.config("kotlin_language_server", {
+    capabilities = capabilities,
+    cmd = { "kotlin-language-server" },
+})
+vim.lsp.enable("kotlin_language_server")
+
+-- Java LSP setup using nvim-jdtls
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "java",
+    callback = function()
+        local jdtls = require("jdtls")
+        
+        -- Adjust or add path to where your jdtls is installed, or ensure it's on your PATH
+        local config = {
+            cmd = { "jdtls" },
+            root_dir = vim.fs.dirname(vim.fs.find({ ".git", "mvnw", "gradlew" }, { upward = true })[1]),
+            capabilities = capabilities,
+        }
+        
+        jdtls.start_or_attach(config)
+    end,
+})
+
 vim.lsp.config("clangd", {
     capabilities = capabilities,
     cmd = { "clangd", "--background-index", "--clang-tidy" },

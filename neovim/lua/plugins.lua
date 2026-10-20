@@ -11,7 +11,7 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         opts = {
-            ensure_installed = { "rust", "c", "cpp", "python", "lua", "toml" },
+            ensure_installed = { "rust", "c", "cpp", "python", "lua", "toml", "java", "kotlin" },
             highlight = { enable = true },
             indent = { enable = true },
         },
@@ -119,6 +119,9 @@ return {
         config = function()
             vim.cmd.colorscheme("moonfly")
         end, 
+    },
+    {
+        "mfussenegger/nvim-jdtls",
     },
 
     {
