@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Shreyaan Misra, July 2026
-# v1.2 - Fixed non-breaking spaces, added wget dependency, and updated python to python3.
+# Shreyaan Misra, October 2026
+# v1.3 - Added alias for Python, install sdkman & use for JDK, Kotlin & Gradle and install curl.
 
 set -euo pipefail
 
@@ -12,7 +12,8 @@ sudo dnf upgrade --refresh -y
 echo "Installing User Packages"
 sudo dnf install -y \
     coreutils gcc make python3 neovim clang unzip \
-    ncurses ncurses-devel git clangd wget
+    ncurses ncurses-devel git clangd wget curl
+curl -s "https://get.sdkman.io" | bash
 
 echo "Setting User Programs"
 
@@ -33,6 +34,7 @@ alias ll="ls -h -l"
 alias vi="nvim"
 alias vim="nvim"
 alias ls="ls -a -h -l --color=auto"
+alias py="python"
 EOF
     echo "Appended aliases/config to ~/.bashrc"
 else
@@ -47,6 +49,10 @@ if ! grep -qF "set bell-style none" "$INPUTRC"; then
 else
     echo "~/.inputrc already configured, skipping"
 fi
+
+sdk install java -tem
+sdk install gradle
+sdk install kotlin
 
 echo "Setting up Neovim config"
 mkdir -p ~/.config/nvim/lua
