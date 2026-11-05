@@ -81,7 +81,7 @@ return {
                 width = 120,
                 height = 30,
             },
-            shell = "powershell",
+            shell = vim.fn.has("win32") == 1 and "powershell" or "bash",
         },
     },
 
